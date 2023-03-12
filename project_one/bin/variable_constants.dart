@@ -2,6 +2,8 @@
 
     //-------In Dart there is no Primary Data type. As every single data type is an object here.-------//
 
+// ignore_for_file: unused_local_variable
+
 void main() {
 
    int number = 7;
