@@ -3,23 +3,13 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "Dart": [
-        
+    "configurations": [
         {
-            "name": "Dart: Run all Tests",
-            "type": "dart",
+            "name": "quiz_app",
             "request": "launch",
-            "program": "./test/"
+            "type": "dart",
+            "program": "lib/login.dart"
         },
-        
 
-
-        {
-            "name": "Dart & Flutter",
-            "request": "launch",
-            "type": "dart",
-            
-        }
     ]
-    
 }
