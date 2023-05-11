@@ -20,8 +20,8 @@ class Myapp extends StatelessWidget {
 class Myhome extends StatelessWidget {
   Myhome({super.key});
 
-  TextEditingController _name = TextEditingController();
-  TextEditingController _pass = TextEditingController();
+  final TextEditingController _name = TextEditingController();
+  final TextEditingController _pass = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +36,12 @@ class Myhome extends StatelessWidget {
             backgroundColor: Color.fromARGB(255, 37, 254, 222),
             child: CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('images/istiaq.jpg'),
+              backgroundColor: Colors.white,
+              backgroundImage: AssetImage('images/icon.png'),
             ),
           ),
           const Text(
-            'Istiaq Ahmed',
+            'Quiz App',
             style: TextStyle(
                 fontSize: 40,
                 color: Colors.white,
@@ -48,18 +49,18 @@ class Myhome extends StatelessWidget {
                 fontFamily: 'Pacifico'),
           ),
           Text(
-            'Software Engineer'.toUpperCase(),
+            'Test Your Limits'.toUpperCase(),
             style: TextStyle(
               color: Colors.teal[100],
               fontFamily: 'SourceSansPro',
-              fontSize: 20,
+              fontSize: 15,
               letterSpacing: 2.5,
               fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(
             height: 20,
-            width: 200,
+            width: 150,
             child: Divider(
               thickness: 2,
               color: Colors.teal[200],
@@ -132,20 +133,36 @@ class Myhome extends StatelessWidget {
               } else {
                 showDialog(
                   context: context,
-                  builder: (context) => AlertDialog(
-                    title: const Text(
-                      "Error",
-                      style: TextStyle(color: Colors.red),
-                    ),
-                    content: ListBody(
-                      children:  const [
-                        Text("You entered wrong password"),
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: const Text(
+                        "Error!!!",
+                        style: TextStyle(fontFamily: 'SourceSansPro'),
+                      ),
+                      content: const Text(
+                        "Password is empty or wrong",
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontFamily: 'SourceSansPro',
+                        ),
+                      ),
+                      actions: [
+                        ElevatedButton(
+                          child: const Text(
+                            "OK",
+                            style: TextStyle(fontFamily: 'SourceSansPro'),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.teal[700],
+                          ),
+                        ),
                       ],
-                    ),
-                  ),
+                    );
+                  },
                 );
-
-                Navigator.of(context).pop();
               }
             },
             child: Container(

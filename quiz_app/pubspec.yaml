@@ -60,6 +60,7 @@ flutter:
 
   assets:
     - images/istiaq.jpg
+    - images/icon.png
 
   fonts:
   - family: Pacifico
