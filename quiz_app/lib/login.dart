@@ -127,7 +127,7 @@ class Myhome extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => home(),
+                    builder: (context) => Home(),
                   ),
                 );
               } else {
@@ -135,14 +135,19 @@ class Myhome extends StatelessWidget {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
+                      backgroundColor: Colors.teal,
                       title: const Text(
                         "Error!!!",
-                        style: TextStyle(fontFamily: 'SourceSansPro'),
+                        style: TextStyle(
+                          fontFamily: 'SourceSansPro',
+                          color: Colors.white,
+                        ),
                       ),
                       content: const Text(
                         "Password is empty or wrong",
                         style: TextStyle(
-                          color: Colors.red,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                           fontFamily: 'SourceSansPro',
                         ),
                       ),
