@@ -1,6 +1,6 @@
 # Dart Introduction for beginners 
 
-# (Here I tried to code out basics of dart || All codes are commented in such a way that everyone can understand it)
+## (Here I tried to code out basics of dart || All codes are commented in such a way that everyone can understand it)
 
 
 1 Dart Installation:  Dart SDK & Environment variable setup
