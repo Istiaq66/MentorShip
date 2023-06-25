@@ -178,7 +178,10 @@ class Myhome extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: 180, vertical: 15),
               decoration: BoxDecoration(
                   color: Colors.teal.shade700,
-                  borderRadius: BorderRadius.circular(8)),
+                  borderRadius: BorderRadius.circular(8),  border: Border.all(
+                      color: Colors.white,
+                      width: 1.5,
+                    ),),
               child: const Text(
                 "Sign In",
                 style: TextStyle(

@@ -21,7 +21,6 @@ class _QuizState extends State<Quiz> {
 
   int result = 0;
   bool select = false;
-  int qNum = 0;
   int? number;
 
   List<Question> qList = [
@@ -44,11 +43,12 @@ class _QuizState extends State<Quiz> {
     Question(
         id: 4,
         question: "What command do you use to output data to the screen?",
-        answer: 1,
+        answer: 2,
         options: ['Cin', 'Count>>', 'Cout', 'Output>>']),
   ];
 
   int _timeleft = 10;
+  int qNum = 0;
 
   void _startCount() {
     Timer.periodic(const Duration(seconds: 1), (timer) {
@@ -86,9 +86,7 @@ class _QuizState extends State<Quiz> {
 
     if (once == 0) {
       _startCount();
-    } else {
-      once++;
-    }
+    } 
   }
 
   @override
@@ -195,6 +193,27 @@ class _QuizState extends State<Quiz> {
                               //---Manual Testing---//
                               print(result);
                               select = true;
+
+                              if (qNum < 3) {
+                                setState(() {
+                                  Future.delayed(Duration(milliseconds: 20))
+                                      .then((_) {
+                                    _timeleft = 10;
+                                    qNum++;
+                                    select = false;
+                                  });
+                                });
+                              } else {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Result(
+                                      userName: nameFromHome,
+                                      Score: result.toString(),
+                                    ),
+                                  ),
+                                );
+                              }
                             }
                           });
                         },
@@ -209,9 +228,9 @@ class _QuizState extends State<Quiz> {
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(color: Colors.blue),
                               ),
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 20, vertical: 10),
-                              margin: EdgeInsets.symmetric(
+                              margin: const EdgeInsets.symmetric(
                                   horizontal: 20, vertical: 10),
                               child: Text(
                                 option,

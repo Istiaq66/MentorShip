@@ -96,7 +96,8 @@ class Home extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Quiz(nameFromHome: _name.text.toString()),
+                      builder: (context) =>
+                          Quiz(nameFromHome: _name.text.toString()),
                     ),
                   );
                 }
@@ -108,8 +109,13 @@ class Home extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 90, vertical: 15),
                 decoration: BoxDecoration(
-                    color: Colors.teal.shade700,
-                    borderRadius: BorderRadius.circular(8)),
+                  color: Colors.teal.shade700,
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 1.5,
+                  ),
+                ),
                 child: const Text(
                   "Start",
                   style: TextStyle(
