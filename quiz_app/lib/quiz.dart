@@ -50,8 +50,10 @@ class _QuizState extends State<Quiz> {
   int _timeleft = 10;
   int qNum = 0;
 
+  Timer? _timer;
+
   void _startCount() {
-    Timer.periodic(const Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         _timeleft--;
         if (_timeleft == 0) {
@@ -86,7 +88,7 @@ class _QuizState extends State<Quiz> {
 
     if (once == 0) {
       _startCount();
-    } 
+    }
   }
 
   @override
@@ -196,7 +198,8 @@ class _QuizState extends State<Quiz> {
 
                               if (qNum < 3) {
                                 setState(() {
-                                  Future.delayed(Duration(milliseconds: 20))
+                                  Future.delayed(
+                                          const Duration(milliseconds: 10))
                                       .then((_) {
                                     _timeleft = 10;
                                     qNum++;
@@ -204,6 +207,7 @@ class _QuizState extends State<Quiz> {
                                   });
                                 });
                               } else {
+                                _timer?.cancel();
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
