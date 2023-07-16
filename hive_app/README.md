@@ -1,6 +1,6 @@
 # hive_app
 
-##How to solve double click on delete method() and understant the concept
+## How to solve double click on delete method() and understant the concept
 
 When you call setState, it triggers a rebuild of the widget tree, including the ListView.builder widget that displays the data from the studentBox. However, the rebuild might happen before the await studentBox.clear() operation completes. As a result, the first rebuild might still show the old data. Calling deleteData for the second time after the rebuild forces another rebuild, which will then reflect the cleared data.By using await to wait for the completion of the deleteData method, you ensure that the data is cleared before triggering the setState method. After the data is cleared, you can perform any additional state updates within the setState callback if necessary.
 
