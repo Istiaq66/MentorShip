@@ -1,7 +1,7 @@
 import 'package:quiz_app/model/questions.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-Future<void> load() async {
+  load()  {
 
   Box<Questions> questionBox = Hive.box<Questions>('q');
  
@@ -313,16 +313,18 @@ Future<void> load() async {
     ),
   ];
 
-  void writeData() {
+
+  writeData() {
     for (int i = 0; i < questions.length; i++) {
-      questionBox.add(questions[i]);
+       questionBox.add(questions[i]);
     }
   }
 
-  // writing data to hive 
-  writeData();
 
-  
+
+  // ------ Fire Method ----- //
+   writeData();
+  // ------ Fire Method ----- //
 
 }
 

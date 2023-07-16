@@ -1,6 +1,9 @@
+import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_app/model/user.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import './model/load.dart';
+import 'dart:math';
 
 class home extends StatefulWidget {
   const home({super.key});
@@ -11,55 +14,32 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
   
-  List<Student> students = [
-    Student(
-        name: 'Istiaq',
-        age: 20,
-        date: DateTime(2017, 9, 10).toString(),
-        options: ['Apple', 'Google', 'Facebook', 'Microsoft']),
-    Student(
-        name: 'Ovi',
-        age: 20,
-        date: DateTime(2017, 9, 10).toString(),
-        options: ['Apple', 'Google', 'Facebook', 'Microsoft']),
-    Student(
-        name: 'Rian',
-        age: 20,
-        date: DateTime(2017, 9, 10).toString(),
-        options: ['Apple', 'Google', 'Facebook', 'Microsoft']),
-    Student(
-        name: 'Reaz',
-        age: 20,
-        date: DateTime(2017, 9, 10).toString(),
-        options: ['Apple', 'Google', 'Facebook', 'Microsoft']),
-  ];
-
   Box<Student> studentBox = Hive.box<Student>('student');
+  LoadData loadData = LoadData();
+  final _controller = ConfettiController();
+  bool _isPlaying = false;
 
-  //write data
-  void writeData() {
-    for (int i = 0; i < students.length; i++) {
-      studentBox.add(students[i]);
-    }
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
   }
 
-  //read data
-  void readData() {
-    print(studentBox.get(3)?.options);
-  }
-
-  //deletedata
-  void deleteData() {
-    setState(() {
-      studentBox.clear();
-    });
+  @override
+  void initState() {
+    super.initState();
+    loadData.writeData();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(children: [
-        SizedBox(
+        ConfettiWidget(
+          confettiController: _controller,
+          blastDirection: -pi / 2,
+        ),
+        const SizedBox(
           height: 50,
         ),
         Row(
@@ -68,24 +48,32 @@ class _homeState extends State<home> {
             MaterialButton(
               onPressed: () {
                 setState(() {
-                  writeData();
+                  loadData.writeData();
                 });
+                _controller.play();
+                 _isPlaying = true;
+               
               },
-              child: Text('Write'),
               color: Colors.blue,
+              child: Text('Write'),
             ),
             MaterialButton(
               onPressed: () {
-                readData();
+                setState(() {
+                  loadData.readData();
+                });
+                if (_isPlaying) {
+                  _controller.stop();
+                }
+                _isPlaying = !_isPlaying;
               },
               child: Text('Read'),
               color: Colors.green,
             ),
             MaterialButton(
-              onPressed: () {
-                setState(() {
-                  deleteData();
-                });
+              onPressed: () async {
+                await loadData.deleteData();
+                setState(() {});
               },
               child: Text('Delete'),
               color: Colors.red,

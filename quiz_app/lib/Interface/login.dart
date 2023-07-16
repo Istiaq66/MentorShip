@@ -6,6 +6,7 @@ import '../model/questions.dart';
 
 
 void main() async {
+
   //initialize hive
   await Hive.initFlutter();
 
@@ -15,7 +16,7 @@ void main() async {
   // open the box
   await Hive.openBox<Questions>('q');
 
-  load();
+   load();
 
   runApp(const Myapp());
 }
