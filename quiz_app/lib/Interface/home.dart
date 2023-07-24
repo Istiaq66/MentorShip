@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/Interface/quiz.dart';
+import '../model/loadData.dart';
 
-class Home extends StatelessWidget {
-  Home({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  
   final TextEditingController _name = TextEditingController();
+
+  Load load = Load();
+  
+  @override
+  void initState() {
+    load.writeData();
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {

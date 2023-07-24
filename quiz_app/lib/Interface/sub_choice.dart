@@ -13,6 +13,7 @@ class _SubChoice extends State<SubChoice> {
     return const Scaffold(
       backgroundColor: Colors.teal,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             children: [

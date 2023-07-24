@@ -15,9 +15,7 @@ void main() async {
 
   // open the box
   await Hive.openBox<Questions>('q');
-
-   load();
-
+  
   runApp(const Myapp());
 }
 
@@ -38,6 +36,7 @@ class Myhome extends StatelessWidget {
 
   final TextEditingController _name = TextEditingController();
   final TextEditingController _pass = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {

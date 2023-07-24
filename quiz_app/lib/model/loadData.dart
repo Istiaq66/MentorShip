@@ -1,7 +1,7 @@
 import 'package:quiz_app/model/questions.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-  load()  {
+ class Load{
 
   Box<Questions> questionBox = Hive.box<Questions>('q');
  
@@ -319,12 +319,6 @@ import 'package:hive_flutter/hive_flutter.dart';
        questionBox.add(questions[i]);
     }
   }
-
-
-
-  // ------ Fire Method ----- //
-   writeData();
-  // ------ Fire Method ----- //
 
 }
 

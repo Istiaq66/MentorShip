@@ -141,7 +141,7 @@ class _QuizState extends State<Quiz> {
                       ),
                       children: [
                         TextSpan(
-                          text: "/" + qList.length.toString(),
+                          text: "/${qList.length}",
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 40,
