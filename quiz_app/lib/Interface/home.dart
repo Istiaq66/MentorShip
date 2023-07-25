@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Interface/quiz.dart';
+import 'package:quiz_app/Interface/sub_choice.dart';
 import '../model/loadData.dart';
 
 class Home extends StatefulWidget {
@@ -113,7 +113,7 @@ class _HomeState extends State<Home> {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          Quiz(nameFromHome: _name.text.toString()),
+                          SubChoice(nameFromHome: _name.text.toString()),
                     ),
                   );
                 }
