@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:quiz_app/Interface/home.dart';
-import 'package:quiz_app/model/loadData.dart';
 import '../model/questions.dart';
 
 
@@ -15,6 +14,8 @@ void main() async {
 
   // open the box
   await Hive.openBox<Questions>('q');
+
+  
   
   runApp(const Myapp());
 }
@@ -135,8 +136,8 @@ class Myhome extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              String name = _name.text;
-              String pass = _pass.text;
+              String name = _name.text.trim();
+              String pass = _pass.text.trim();
 
               if (name == "admin" && pass == "12345") {
                 Navigator.push(

@@ -43,14 +43,14 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'Physics',
-      id: 6,
+      id: 1,
       question: 'What is the unit of measurement for electric current?',
       answer: 1,
       options: ['Volts', 'Amperes', 'Ohms', 'Watts'],
     ),
     Questions(
       subject: 'Physics',
-      id: 7,
+      id: 2,
       question:
           'Which law describes the relationship between an object\'s mass, acceleration, and the applied force?',
       answer: 3,
@@ -63,21 +63,21 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'Physics',
-      id: 8,
+      id: 3,
       question: 'What is the SI unit of energy?',
       answer: 0,
       options: ['Joule', 'Watt', 'Newton', 'Volt'],
     ),
     Questions(
       subject: 'Physics',
-      id: 9,
+      id: 4,
       question: 'What type of waves are used for communication in cell phones?',
       answer: 2,
       options: ['Ultraviolet waves', 'Radio waves', 'Microwaves', 'X-rays'],
     ),
     Questions(
       subject: 'Physics',
-      id: 10,
+      id: 5,
       question: 'What is the speed of light in a vacuum?',
       answer: 3,
       options: [
@@ -89,21 +89,21 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'Chemistry',
-      id: 11,
+      id: 1,
       question: 'What is the atomic number of hydrogen?',
       answer: 0,
       options: ['1', '2', '3', '4'],
     ),
     Questions(
       subject: 'Chemistry',
-      id: 12,
+      id: 2,
       question: 'What is the chemical symbol for gold?',
       answer: 2,
       options: ['Au', 'Ag', 'Hg', 'Fe'],
     ),
     Questions(
       subject: 'Chemistry',
-      id: 13,
+      id: 3,
       question: 'What is the pH value of a neutral solution?',
       answer: 1,
       options: ['1', '7', '14', '0'],
@@ -111,14 +111,14 @@ import 'package:hive_flutter/hive_flutter.dart';
     // Add more chemistry questions here with IDs starting from 14
     Questions(
       subject: 'Chemistry',
-      id: 14,
+      id: 4,
       question: 'What is the formula for water?',
       answer: 3,
       options: ['H2O', 'CO2', 'NaCl', 'CH4'],
     ),
     Questions(
       subject: 'Chemistry',
-      id: 15,
+      id: 5,
       question: 'What is the chemical name for the compound NH3?',
       answer: 0,
       options: [
@@ -130,7 +130,7 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'Biology',
-      id: 16,
+      id: 1,
       question: 'What is the powerhouse of the cell?',
       answer: 1,
       options: [
@@ -142,14 +142,14 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'Biology',
-      id: 17,
+      id: 2,
       question: 'What is the largest organ in the human body?',
       answer: 2,
       options: ['Liver', 'Heart', 'Skin', 'Brain'],
     ),
     Questions(
       subject: 'Biology',
-      id: 18,
+      id: 3,
       question:
           'What is the process by which plants convert sunlight into energy?',
       answer: 0,
@@ -162,7 +162,7 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'Biology',
-      id: 19,
+      id: 4,
       question: 'What is the scientific name for humans?',
       answer: 3,
       options: [
@@ -174,21 +174,21 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'Biology',
-      id: 20,
+      id: 5,
       question: 'Which of the following is not a major blood type?',
       answer: 2,
       options: ['A', 'B', 'D', 'O'],
     ),
     Questions(
       subject: 'General Knowledge',
-      id: 21,
+      id: 1,
       question: 'What is the capital of France?',
       answer: 2,
       options: ['London', 'Rome', 'Paris', 'Madrid'],
     ),
     Questions(
       subject: 'General Knowledge',
-      id: 22,
+      id: 2,
       question: 'Who painted the Mona Lisa?',
       answer: 1,
       options: [
@@ -200,7 +200,7 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'General Knowledge',
-      id: 23,
+      id: 3,
       question: 'What is the largest ocean in the world?',
       answer: 3,
       options: [
@@ -212,14 +212,14 @@ import 'package:hive_flutter/hive_flutter.dart';
     ),
     Questions(
       subject: 'General Knowledge',
-      id: 24,
+      id: 4,
       question: 'Which planet is known as the "Red Planet"?',
       answer: 0,
       options: ['Mars', 'Venus', 'Jupiter', 'Saturn'],
     ),
     Questions(
       subject: 'General Knowledge',
-      id: 25,
+      id: 5,
       question: 'Who wrote the play "Romeo and Juliet"?',
       answer: 2,
       options: [
@@ -227,52 +227,6 @@ import 'package:hive_flutter/hive_flutter.dart';
         'George Orwell',
         'Jane Austen',
         'Charles Dickens'
-      ],
-    ),
-    Questions(
-      subject: 'Programming',
-      id: 26,
-      question:
-          'What is the output of the following code?\n\n```dart\nvoid main() {\n  int x = 5;\n  print(x++);\n  print(++x);\n}```',
-      answer: 3,
-      options: ['5\n6', '6\n7', '6\n6', '6\n7'],
-    ),
-    Questions(
-      subject: 'Programming',
-      id: 27,
-      question: 'Which programming language is used to build Android apps?',
-      answer: 1,
-      options: ['Python', 'Java', 'C++', 'JavaScript'],
-    ),
-    Questions(
-      subject: 'Programming',
-      id: 28,
-      question: 'What does HTML stand for?',
-      answer: 0,
-      options: [
-        'Hypertext Markup Language',
-        'Hyperloop Machine Language',
-        'High-Level Programming Language',
-        'Home Tool Markup Language'
-      ],
-    ),
-    Questions(
-      subject: 'Programming',
-      id: 29,
-      question: 'What is the file extension for a Python source code file?',
-      answer: 2,
-      options: ['.py', '.txt', '.java', '.cpp'],
-    ),
-    Questions(
-      subject: 'Programming',
-      id: 30,
-      question: 'What is the purpose of the "for" loop in programming?',
-      answer: 3,
-      options: [
-        'Display a message on the screen',
-        'Create a variable',
-        'Define a function',
-        'Repeat a block of code a specific number of times'
       ],
     ),
     Questions(
@@ -318,6 +272,11 @@ import 'package:hive_flutter/hive_flutter.dart';
     for (int i = 0; i < questions.length; i++) {
        questionBox.add(questions[i]);
     }
+  }
+
+    //deletedata
+  Future<void> deleteData() async {
+    await questionBox.clear();
   }
 
 }
