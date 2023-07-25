@@ -33,6 +33,7 @@ class SubjectCard extends StatelessWidget {
           ],
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(
@@ -60,8 +61,8 @@ class SubjectCard extends StatelessWidget {
             Text(
               cardName,
               style: const TextStyle(
-                fontFamily: 'SourceSans3',
-                fontSize: 16,
+                fontSize: 15,
+                fontWeight: FontWeight.bold
               ),
             ),
             const SizedBox(
