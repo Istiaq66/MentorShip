@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:confetti/confetti.dart';
 import 'dart:math';
@@ -192,12 +191,6 @@ class _ResultState extends State<Result> {
           blastDirection: -pi / 2,
           emissionFrequency: 0.05, // How often the particles should be emitted
           numberOfParticles: 20, // Number of particles in a single emission
-          maxBlastForce: 50, // Maximum blast force applied to each particle
-          minBlastForce: 20, // Minimum blast force applied to each particle
-          gravity:
-              0.1, // Gravity applied to particles to simulate falling effect
-          particleDrag:
-              0.05, // Drag applied to particles to slow down their movement
         ),
       ],
     );
