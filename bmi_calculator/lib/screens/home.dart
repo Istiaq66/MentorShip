@@ -4,13 +4,15 @@ import 'package:bmi_calculator/widgets/right_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  TextEditingController _heightController = TextEditingController();
-  TextEditingController _weightController = TextEditingController();
+  final TextEditingController _heightController = TextEditingController();
+  final TextEditingController _weightController = TextEditingController();
   double _bmiResult = 0;
   String _textResult = "";
 
@@ -30,13 +32,13 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
           child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
+              SizedBox(
                 width: 130,
                 child: TextField(
                   controller: _heightController,
@@ -54,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.white.withOpacity(0.8))),
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 130,
                 child: TextField(
                   controller: _weightController,
@@ -74,21 +76,21 @@ class _HomeScreenState extends State<HomeScreen> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           GestureDetector(
             onTap: () {
-              double _h = double.parse(_heightController.text);
-              double _w = double.parse(_weightController.text);
+              double h = double.parse(_heightController.text);
+              double w = double.parse(_weightController.text);
               setState(() {
-                _bmiResult = _w / (_h * _h);
+                _bmiResult = w / (h * h);
                 if (_bmiResult > 25) {
-                  _textResult = "You\'re over weight ";
+                  _textResult = "You're over weight ";
                 } else if (_bmiResult >= 18.5 && _bmiResult <= 25) {
                   _textResult = "You have normal weight";
                 } else {
-                  _textResult = "You\'re under weight";
+                  _textResult = "You're under weight";
                 }
               });
             },
@@ -100,16 +102,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: accentHexColor),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Container(
-            child: Text(
-              _bmiResult.toStringAsFixed(2),
-              style: TextStyle(fontSize: 90, color: accentHexColor),
-            ),
+          Text(
+            _bmiResult.toStringAsFixed(2),
+            style: TextStyle(fontSize: 90, color: accentHexColor),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Visibility(
@@ -122,34 +122,34 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: accentHexColor),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          LeftBar(
+          const LeftBar(
             barWidth: 40,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          LeftBar(
+          const LeftBar(
             barWidth: 70,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          LeftBar(
+          const LeftBar(
             barWidth: 40,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          RightBar(
+          const RightBar(
             barWidth: 70,
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          RightBar(
+          const RightBar(
             barWidth: 50,
           ),
         ],
