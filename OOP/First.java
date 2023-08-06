@@ -1,4 +1,3 @@
-
 // class object and constructor
 
 class Car {
@@ -75,24 +74,47 @@ class Money_bag {
 
 }
 
+// Abstraction
+abstract class Human {
+  int age;
+  String name;
 
-
-//Abstraction 
-
- abstract class Human{
-
-  public abstract void  occupation();
-
+  public abstract void occupation();
 }
 
-class Student extends Human{
+// interface
+interface HumanBehaviour {
+  boolean angry = true; 
+  //*  every field in a interface has to be static final so we have to declare it 
+  //*  and same value is aplied for all objects of that class 
+  //*  By default every method in a interface is public abstract --> no need to mention
+
+   void behaviour();
+}
+
+interface Child{
+   void run();
+}
+
+class Student extends Human implements HumanBehaviour,Child { 
+  //!  We can implement as many interfaces we want
+  //!  but we can extend only one abstract class
+
   @Override
   public void occupation() {
     System.out.println("Hi I'm a student");
   }
+
+  @Override
+  public void behaviour() {
+    System.out.println("I'm Angry");
+  }
+
+  @Override
+  public void run() {
+  System.out.println("I'm Running");
+  }
 }
-
-
 
 class First {
   public static void main(String args[]) {
@@ -103,30 +125,18 @@ class First {
     car.width = 3;
     System.out.println(car.heigth + car.width);
 
-
-
     // Inheritance
     adCalc cal = new adCalc();
     int c;
     c = cal.add(5, 4);
 
-
     System.out.println(c);
     // compile time polymorphism
     c = cal.add(12, 13, 14);
 
-
-
-
     // Run time polymorphism
     Dog dog = new Dog();
     dog.sound();
-
-
-
-
-
-
 
     Money_bag money_bag = new Money_bag();
     // money_bag.balance; //error private tai
@@ -134,13 +144,9 @@ class First {
     money_bag.set_balance(100);
     System.out.println(money_bag.get_balance());
 
-
-
-    //abstraction
+    // abstraction
     Student student = new Student();
     student.occupation();
-  
-
 
   }
 }

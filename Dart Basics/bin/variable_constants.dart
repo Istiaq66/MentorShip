@@ -1,6 +1,4 @@
-
-
-    //-------In Dart there is no Primary Data type. As every single data type is an object here.-------//
+//-------In Dart there is no Primary Data type. As every single data type is an object here.-------//
 
 // ignore_for_file: unused_local_variable
 
@@ -74,7 +72,7 @@ void main() {
 
 //* runtime constant
   final currentDay = DateTime.now().toUtc().toString();
-  print('Today is: ' +currentDay);
+  print('Today is: $currentDay');
   
 
 }

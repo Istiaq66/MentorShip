@@ -1,5 +1,3 @@
-// ignore_for_file: unused_local_variable
-
 //! OPERATIONS ON MIXED TYPES
 int integerValue = 3;
 double doubleValue = 2;
@@ -12,7 +10,7 @@ void main() {
 
 //------TYPE CASTING-------//
   num value = 7;
-  //print(value.isEven);//--->error
+//print(value.isEven);//--->error
   var valueInteger = value as int;
   print(value.isEven);
 //------TYPE CASTING-------//

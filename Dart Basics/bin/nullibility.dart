@@ -1,8 +1,6 @@
 //! nullability
 
 // int phoneNumber = null;
-
-
 void isEvenOrOdd(int value){
   if(value.isEven){
      print('$value is Even');

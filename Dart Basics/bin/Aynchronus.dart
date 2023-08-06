@@ -20,7 +20,6 @@
 //* event loop
 // Dart uses an event loop to execute tasks that had previously been postponed.
 
-
 //! FUTURES
 // Future<dataType> identifier;
 
@@ -57,11 +56,9 @@ Completed with an error
 //     print('After the future');
 // }
 
-
-
 //*  Getting the result with async-await
-Future<void> main() async{
-    print('Before the future');
+Future<void> main() async {
+  print('Before the future');
 
   final value = await Future<int>.delayed(
     Duration(seconds: 1),
@@ -81,19 +78,18 @@ Future<void> main() async{
 
   print('\nBefore the future');
 
-try {
-  final value = await Future<int>.delayed(
-    Duration(seconds: 1),
-    () => 55,
-  );
-  // not lets throw an error
-  throw Exception('There was an error');
-  print('Value: $value');
-} catch (error) {
-  print(error);
-} finally {
-  print('Future is complete');
-}
-print('After the future');
-
+  try {
+    final value = await Future<int>.delayed(
+      Duration(seconds: 1),
+      () => 55,
+    );
+    // not lets throw an error
+    throw Exception('There was an error');
+    print('Value: $value');
+  } catch (error) {
+    print(error);
+  } finally {
+    print('Future is complete');
+  }
+  print('After the future');
 }
