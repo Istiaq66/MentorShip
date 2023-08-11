@@ -7,19 +7,19 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
-      child: SizedBox(
-        width: 90,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(
-              image: AssetImage(image!),
-            ),
-            Text(title!),
-          ],
-        
-        ),
+    return Expanded(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image(
+            image: AssetImage(image!),
+            height: 60,
+          ),
+          Text(
+            title!,
+            style: const TextStyle(fontFamily: 'SourceSansPro',fontSize: 12),
+          ),
+        ],
       ),
     );
   }

@@ -15,6 +15,7 @@ class _NavigationPageState extends State<NavigationPage> {
   List screens = [
     const Home(),
     const Inbox(),
+    const Inbox(),
   ];
 
   void _onItemTapped(int index) {
@@ -42,10 +43,16 @@ class _NavigationPageState extends State<NavigationPage> {
           notchMargin: 8.0,
           clipBehavior: Clip.antiAlias,
           child: BottomNavigationBar(
+            iconSize: 30,
+            backgroundColor: Colors.white,
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.qr_code_scanner_sharp),
+                label: 'Scan QR',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.email),

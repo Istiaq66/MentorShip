@@ -8,7 +8,7 @@ class BalanceButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(1.5),
+      padding: const EdgeInsets.all(3),
       margin: const EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -20,9 +20,10 @@ class BalanceButton extends StatelessWidget {
           const SizedBox(
             width: 5,
           ),
-          const Icon(
-            Icons.currency_exchange,
-            color: Colors.pink,
+          CircleAvatar(
+            backgroundImage: const AssetImage('images/currency.png'),
+            backgroundColor: Colors.pink[400],
+            radius: 10,
           ),
           const SizedBox(
             width: 10,
