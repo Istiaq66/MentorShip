@@ -27,6 +27,7 @@ class _NavigationPageState extends State<NavigationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: screens.elementAt(index),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
@@ -51,7 +52,7 @@ class _NavigationPageState extends State<NavigationPage> {
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.qr_code_scanner_sharp),
+                icon: Icon(Icons.abc),
                 label: 'Scan QR',
               ),
               BottomNavigationBarItem(

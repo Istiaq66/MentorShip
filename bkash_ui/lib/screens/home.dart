@@ -1,8 +1,9 @@
+import 'package:bkash_ui/components/expanded_menu.dart';
 import 'package:bkash_ui/components/scroll_menu.dart';
 import 'package:flutter/material.dart';
 import '../components/appbar.dart';
 import '../components/carousel.dart';
-import '../components/menu.dart';
+
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -17,100 +18,13 @@ class Home extends StatelessWidget {
           children: [
             //Main menu on the top//
             Container(
-              margin: const EdgeInsets.fromLTRB(6, 0, 6, 0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Column(
-                children: [
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    children: [
-                      Menu(image: "images/send_money.jpg", title: 'Send Money'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(
-                          image: "images/mobile_recharge.jpg",
-                          title: 'Mobile Recharge'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(image: "images/cash_out.jpg", title: 'Cash Out'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(
-                          image: "images/make_payment.jpg",
-                          title: 'Make Payment'),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Row(
-                    children: [
-                      Menu(image: "images/add_money.jpg", title: 'Add Money'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(image: "images/pay_bill.jpg", title: 'Pay Bill'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(image: "images/savings.png", title: 'Savings'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(image: "images/loan.png", title: 'Loan'),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Row(
-                    children: [
-                      Menu(image: "images/b2b.png", title: 'Bkash to Bank'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(image: "images/remitence.png", title: 'Remittance'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(image: "images/edufee.png", title: 'Education Fee'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Menu(image: "images/mfin.png", title: 'Micro Finance'),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ScrollMenu(image: "images/binimoy.png", title: 'BINIMOY'),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      ScrollMenu(
-                          image: "images/bangla_qr.png", title: 'Bangla QR'),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+                margin: const EdgeInsets.fromLTRB(6, 0, 6, 0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const ExpandedMenu()),
+            
             //My bkash//
             Container(
               margin: const EdgeInsets.all(10),
@@ -269,7 +183,7 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-          
+
             //PayBills//
             Container(
               margin: const EdgeInsets.all(10),
@@ -330,9 +244,9 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-            
+
             const SizedBox(
-              height: 40,
+              height: 80,
             ),
           ],
         ),
