@@ -29,4 +29,16 @@ When you set extendBody: true in a Scaffold, you are essentially allowing the bo
 ### How to solve text overflow issues?
 
 
-In my app I faced a issue during design of text widgets in inbox section for different screen sizes it can give overflow error 
+In my app I faced a issue during design of text widgets in inbox section for different screen sizes which can produce overflow error 
+
+
+
+
+## Final Result
+
+| ![Image 1](images/bk7.jpg) | ![Image 2](images/bk1.jpg) | ![Image 3](images/bk6.jpg) | ![Image 4](images/bk5.jpg) | ![Image 5](images/bk4.jpg) | ![Image 6](images/bk3.jpg) | ![Image 7](images/bk2.jpg) |
+|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|
+
+
+## Demo video of this project-->
+[![Alt text](https://img.youtube.com/vi/fzvb8dCL5Ow/0.jpg)](https://www.youtube.com/watch?v=fzvb8dCL5Ow)
