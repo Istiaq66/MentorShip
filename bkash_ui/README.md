@@ -1,7 +1,6 @@
 # bkash_ui
 
-
-## Getting Started
+## [Run App](https://github.com/Istiaq66/MentorShip/blob/master/bkash_ui/app-release.apk)
 
 ## Appbar
 
