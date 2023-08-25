@@ -15,3 +15,6 @@
    Readme.md → description of the project what the project does
    
 ## NB: Codes are located in the bin folder 📂 
+
+### 🚀[Video tutorial link](https://www.youtube.com/watch?v=igauQ_rF_bU)
+ 
