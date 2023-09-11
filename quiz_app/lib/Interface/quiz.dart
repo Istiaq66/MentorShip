@@ -34,7 +34,7 @@ class _QuizState extends State<Quiz> {
     // Clear the list before loading the questions
     quiz.clear();
 
-    // Iterate through the items in the box and add physics questions to the list
+    // Iterate through the items in the box and add questions to the list
     for (var i = 0; i < questionBox.length; i++) {
       final question = questionBox.getAt(i);
       if (question != null && question.subject == subChoice) {
@@ -182,7 +182,7 @@ class _QuizState extends State<Quiz> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: quiz[qNum].options!.map((option) {
-                            number = (quiz[qNum].options!.indexOf(option)+1);
+                            number = (quiz[qNum].options!.indexOf(option) + 1);
                             return InkWell(
                               onTap: () {
                                 setState(() {
