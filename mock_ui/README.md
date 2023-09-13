@@ -1,4 +1,4 @@
-# mock_ui (only for education purposes)
+# mock_ui (only for educational purpose)
 
 ## [Run App](https://github.com/Istiaq66/MentorShip/blob/master/bkash_ui/app-release.apk)
 
