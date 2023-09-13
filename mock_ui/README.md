@@ -1,4 +1,4 @@
-# bkash_ui
+# mock_ui (only for education purposes)
 
 ## [Run App](https://github.com/Istiaq66/MentorShip/blob/master/bkash_ui/app-release.apk)
 
