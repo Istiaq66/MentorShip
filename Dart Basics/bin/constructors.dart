@@ -43,7 +43,7 @@ class Car {
   Car({ this.make, this.bodyType});
 
   // required named parameter
-  // Car((@required this.make,@required this.bodyType});
+  // Car({@required this.make,@required this.bodyType});
 
    String? make;
    String? bodyType;
