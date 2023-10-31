@@ -40,4 +40,4 @@ In my app I faced a issue during design of text widgets in inbox section for dif
 
 
 ## Demo video of this project-->
-[![Alt text](https://img.youtube.com/vi/_ZRFRzpvhuI/0.jpg)](www.youtube.com/watch?v=_ZRFRzpvhuI)
+[![Alt text](https://img.youtube.com/vi/_ZRFRzpvhuI/0.jpg)](https://www.youtube.com/watch?v=_ZRFRzpvhuI)
