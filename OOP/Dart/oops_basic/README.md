@@ -1,4 +1,4 @@
-# OOP 
+------------------------ # OOP ------------------------
 
 ## Abstraction.
 Using simple things to represent complexity. We all know how to turn the TV on, but we don’t need to know how it works in order to enjoy it. In Java, abstraction means simple things like objects, classes and variables represent more complex underlying code and data. This is important because it lets you avoid repeating the same work multiple times.
@@ -30,7 +30,7 @@ Allows programmers to use the same word in Java to mean different things in diff
 | `extends`   | ✅ Yes          | ❌ No             | Reuse + customize behavior     |
 | `implements`| ❌ No           | ✅ Yes            | Enforce a common API / contract|
 
-## 4. Example
+### 4. Example
 
 ```dart
 abstract class AuthService {
