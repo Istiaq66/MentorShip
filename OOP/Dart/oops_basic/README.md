@@ -1,4 +1,4 @@
-#OOP 
+# OOP 
 
 ## Abstraction.
 Using simple things to represent complexity. We all know how to turn the TV on, but we don’t need to know how it works in order to enjoy it. In Java, abstraction means simple things like objects, classes and variables represent more complex underlying code and data. This is important because it lets you avoid repeating the same work multiple times.
@@ -12,18 +12,18 @@ A special feature of Object-Oriented Programming in Java, Inheritance lets progr
 ## Polymorphism.
 Allows programmers to use the same word in Java to mean different things in different contexts. One form of polymorphism is method overloading. That’s when the code itself implies different meanings. The other form is method overriding. That’s when the values of the supplied variables imply different meanings. Let’s delve a little further.
 
-# Dart: `implements` and Interfaces
+## Dart: `implements` and Interfaces
 
-## 1. Dart and Interfaces
+### 1. Dart and Interfaces
 - Dart does **not have a special `interface` keyword**.  
 - Every class in Dart **automatically defines an interface** (its public methods and properties).  
 
-## 2. `implements` Keyword
+### 2. `implements` Keyword
 - Used when a class wants to **follow the interface of another class or abstract class**.  
 - The class **must re-implement all methods and getters/setters**.  
 - **Does NOT inherit** any actual code from the implemented class.  
 
-## 3. `extends` vs `implements`
+### 3. `extends` vs `implements`
 
 | Keyword      | Inherits Code? | Must Re-implement? | Use Case                        |
 |-------------|----------------|------------------|--------------------------------|
